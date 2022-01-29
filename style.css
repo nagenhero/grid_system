@@ -1,0 +1,160 @@
+body{
+    margin:0;
+    font-size: 32px;
+    color:white;
+}
+.circle
+{
+    background: red;
+    width:60px;
+    height: 40px;
+    border-radius: 50%;
+    margin:auto;
+    margin-top:70px;
+    display:none;
+
+}
+.wrapper
+{
+    background: purple;
+    min-height: 80vh;/* gives min 80% of the browser */
+    padding:16px;
+    /* grid system */
+    display:grid;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns:repeat(3, 1fr); */
+    /* grid-template-rows: auto; */
+
+    /* grid-template-columns: 2fr 1fr 2fr;  out 0f 100 2+1+2=5/100     */
+
+    gap:10px;
+    grid-template-areas: 
+    
+    "item8 item2 item7"
+    "item5 item5 item6"
+    "item3 item1 item6"
+    "item4 item4 item9"
+    
+    ;
+    
+
+
+}
+.wrapper > div {
+    background: orange;
+    /* width:50px; */
+    /* height: 50px; */
+    /* margin-top:3px; */
+
+    /* grid system */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    }
+  
+    .item-1
+    {
+        grid-area:item1;
+    }
+    
+    .item-2
+    {
+        grid-area:item2;
+    }
+    
+    .item-3
+    {
+        grid-area:item3;
+    }
+    
+    .item-4
+    {
+        grid-area:item4;
+    }
+    
+    .item-5
+    {
+        grid-area:item5;
+    }
+    .item-6
+    {
+        grid-area:item6;
+    }
+    .item-7
+    {
+        grid-area:item7;
+    }
+    .item-8
+    {
+        grid-area:item8;
+    }
+    .item-9
+    {
+        grid-area:item9;
+    }
+    /* media query */
+    /* screen size ipad<768, maximum with upo 768 */
+    @media (max-width: 768px)
+    {
+
+        .wrapper {
+            
+            /* width:50px; */
+            /* height: 50px; */
+            /* margin-top:3px; */
+        
+            /* grid system */
+            display: grid;
+            gap:10px;
+            grid-template-areas: 
+            "item1 item1"
+            "item2 item3"
+            "item4 item4"
+            "item7 item6"
+            "item8 item9"
+            "item5 item5"
+            ;
+            
+        
+            }
+            .circle{
+                display: block;
+            }
+          
+    }
+    /* for mobile version */
+    @media (max-width: 576px)
+    {
+
+        .wrapper {
+            
+            /* width:50px; */
+            /* height: 50px; */
+            /* margin-top:3px; */
+        
+            /* grid system */
+            display: grid;
+            gap:10px;
+            grid-template-areas: 
+            "item1"
+            "item2"
+            "item4"
+            "item7"
+            "item8"
+            "item5"
+            "item6"
+            "item9"
+            "item3"
+            ;
+            
+        
+            }
+            .circle{
+                display: none;
+            }
+          
+    }
+    
+    /* scrren mobile size <576px, maximum upto 576px */
+    
